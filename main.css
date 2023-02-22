@@ -20,8 +20,9 @@ header > h1 {
 
 footer {
     color: white;
+    justify-content: flex-end;
     padding-top: 10px;
-    text-align: right;
+    text-align: center;
     padding-right: 30px;
     padding-bottom: 50px;
     display: flex;
@@ -31,23 +32,10 @@ footer {
     flex: 0 15vh;
 }
 
-section:nth-child(1) {
-    background-color: green;
-    flex: 10;
-}
-section:nth-child(2){
-    background-color: yellow;
-    outline: maroon;
-    flex: 1;
-    padding-right: 30px;
-
-}
-
-section:nth-child(3){
-    background-color: #b30000;
-    outline: maroon;
-    flex: 1;
-    padding-right: 10px;
+.myFooter {
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
 }
 
 main {
@@ -60,6 +48,22 @@ main {
     justify-content: space-around;
 }
 
+main > h3 {
+    flex: 2;
+    color: maroon;
+    text-shadow: brown;
+}
+
+main > form {
+    flex: 2;
+    color: maroon;
+}
+
+main > form > button {
+    color: white;
+    background-color: maroon;
+}
+
 menu {
     
     color: white;
@@ -67,7 +71,6 @@ menu {
     display: flex;
     flex-direction: row;
     list-style: none;
-    
 
   }
 
@@ -123,6 +126,57 @@ li:nth-child(8) {
     
 }
 
+.players {
+    color: maroon;
+
+}
+
+main > div > label {
+    color: maroon;
+}
+
+main > div > button {
+    color: white;
+    background-color: maroon;
+}
+
+table {
+    width: 80%;
+    border: 3px solid maroon;
+}
+
+tr {
+
+    background-color: #a70505;
+    outline-style: solid;
+    outline-width: 3px;
+    height: 10px;
+    border: 3px solid rgb(217, 192, 255);
+
+}
+
+th {
+    color: yellow;
+}
+
+td {
+    border: 3px solid maroon;
+    color: white;
+
+}
+
+main > p {
+    color: maroon;
+    font-size: 1.3em;
+
+}
+
+.myGitHub {
+    color: white;
+    text-decoration-line: underline;
+    text-decoration-color: white;
+    text-decoration-style: solid;
+}
 
 @media(max-height: 600px) {
     header: {
