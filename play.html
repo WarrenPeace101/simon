@@ -60,7 +60,7 @@
             <br />
 
             <div>
-                <button>Try again</button>
+                <button onclick="game.reset()">Try again</button>
             </div>
 
             <br />
@@ -69,7 +69,7 @@
                 <table>
                     <tr>
                         <td>
-                            <button>
+                            <button onclick="game.pressButton(this)">
                                 <svg
                                 aria-hidden="false"
                                 viewBox="0 0 100 100"
@@ -82,7 +82,7 @@
                             </button>
                         </td>
                         <td>
-                            <button>
+                            <button onclick="game.pressButton(this)">
                                 <svg
                                 aria-hidden="true"
                                 viewBox="0 0 100 100"
@@ -96,7 +96,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <button>
+                            <button onclick="game.pressButton(this)">
                                 <svg
                                 aria-hidden:"false"
                                 viewBox="0 0 100 100"
@@ -105,7 +105,7 @@
                                 >
                                 <path d="M5,5 95,5 95,95 Q 5,95 5,5" fill="blue" />
                                 </svg>
-                            </button>
+                            </button onclick="game.pressButton(this)">
                         </td>
                         <td>
                             <button>
@@ -132,6 +132,9 @@
                 <section><a class="myGitHub" href="https://github.com/WarrenPeace101/simon">Warren</a></section>
             </div>
         </footer>
+
+        <script src="play.js"></script>
+        
     </body>
 
 </html>
