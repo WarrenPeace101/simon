@@ -1,4 +1,4 @@
-function loadTable() {
+function loadScores() {
 
     let scores = [];
     const scoresText = localStorage.getItem('scores');
@@ -38,4 +38,4 @@ function loadTable() {
 
 }
 
-loadTable();
+loadScores();
