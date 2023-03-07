@@ -1,9 +1,9 @@
-const buttonDescriptions = [
+const btnDescriptions = [
     {file: 'sound1.mp3', hue: 120},
     {file: 'sound2.mp3', hue: 0},
     {file: 'sound3.mp3', hue: 60},
     {file: 'sound4.mp3', hue: 240},
-]
+];
 
 class Button {
     constructor(description, el) {
@@ -14,9 +14,9 @@ class Button {
     }
 
     paint(level) {
-
-        const background = 'hsl(${this.hue}, 100%, ${level}%)';
-        this.el.style.backgroundColor = background;
+      
+      const background = `hsl(${this.hue}, 100%, ${level}%)`;
+      this.el.style.backgroundColor = background;
     }
 
     async press(volume) {
