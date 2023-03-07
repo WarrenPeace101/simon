@@ -1,4 +1,3 @@
-# Simon says...
-Hey guys! This is my version of the Simon game! I hope you enjoy your stay!
+# simon-javascript
 
-Simon says go have an awesome day!
+This deliverable demonstrates the use of basic JavaScript for interactivity.
