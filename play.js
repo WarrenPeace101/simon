@@ -14,7 +14,7 @@ class Button {
     }
 
     paint(level) {
-      
+
       const background = `hsl(${this.hue}, 100%, ${level}%)`;
       this.el.style.backgroundColor = background;
     }
@@ -50,7 +50,7 @@ class Game {
     constructor() {
 
         this.buttons = new Map();
-        this.alowPlayer = false;
+        this.allowPlayer = false;
         this.sequence = [];
         this.playerPlaybackPos = 0;
         this.mistakeSound = loadSound('error.mp3');
@@ -82,7 +82,7 @@ class Game {
                 }
                 this.allowPlyer = true;
             } else {
-                this.saveScore(this.sequence.length() - 1);
+                this.saveScore(this.sequence.length - 1);
                 this.mistakeSound.play();
                 await this.buttonDance(2);
              }
