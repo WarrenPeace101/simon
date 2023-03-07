@@ -1,140 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon</title>
+    <link rel="icon" href="favicon.ico" />
 
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
 
-        <title>Simon</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-dark text-light">
+    <header class="container-fluid">
+      <nav class="navbar fixed-top navbar-dark">
+        <a class="navbar-brand" href="#">Simon<sup>&reg;</sup></a>
+        <menu class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="play.html">Play</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="scores.html">Scores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </menu>
+      </nav>
+    </header>
 
-        <link rel="icon" href="simonpeter.ico" />
-        <link rel="stylesheet" href="main.css" />
+    <main class="bg-secondary">
+      <div class="players">
+        Player:
+        <span class="player-name"></span>
+      </div>
+      <div class="game">
+        <div class="button-container">
+          <button id="green" class="game-button button-top-left" onclick="game.pressButton(this)"></button>
+          <button id="red" class="game-button button-top-right" onclick="game.pressButton(this)"></button>
+          <button id="yellow" class="game-button button-bottom-left" onclick="game.pressButton(this)"></button>
+          <button id="blue" class="game-button button-bottom-right" onclick="game.pressButton(this)"></button>
+          <div class="controls center">
+            <div class="game-name">Simon<sup>&reg;</sup></div>
+            <div id="score" class="score center">--</div>
+            <button class="btn btn-primary" onclick="game.reset()">Reset</button>
+          </div>
+        </div>
+      </div>
+    </main>
 
-        <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <footer class="bg-dark text-dark text-muted">
+      <div class="container-fluid">
+        <span class="text-reset">Warren</span>
+        <a class="text-reset" href="https://github.com/WarrenPeace101/simon">Source</a>
+      </div>
+    </footer>
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-        crossorigin="anonymous"/>
-  
-    </head>
-
-    <body>
-        <header>
-            <br>
-            <h1>Simon 2.0<sup><i class="em em-laughing" aria-role="presentation" aria-label="SMILING FACE WITH OPEN MOUTH AND TIGHTLY-CLOSED EYES"></i></sup></h1>
-            <nav>
-
-                <menu>
-
-                    <li><a class="nav-link" href="index.html">Home</a></li>
-                    <li></li>
-                    <li><a class="nav-link" href="play.html">Play</a></li>
-                    <li></li>
-                    <li><a class="nav-link" href="scores.html">Scores</a></li>
-                    <li></li>
-                    <li><a class="nav-link" href="about.html">About</a></li>
-                    <li></li>
-
-                </menu>
-
-            </nav>
-
-            <hr />
-        </header>
-
-        <main>
-
-            <div class="players">
-                Player: 
-                <span class="player-name">Mystery Player</span>
-            </div>
-
-            <br />
-
-            <div>
-                <label for="count">Score</label>
-                <input type="text" id="count" value="--" readonly />
-            </div>
-
-            <br />
-
-            <div>
-                <button onclick="game.reset()">Try again</button>
-            </div>
-
-            <br />
-
-            <div>
-                <table>
-                    <tr>
-                        <td>
-                            <button onclick="game.pressButton(this)">
-                                <svg
-                                aria-hidden="false"
-                                viewBox="0 0 100 100"
-                                height="100"
-                                width="100"
-                                >
-                                <path d="M 95,5 95,95 5,95 Q 5,5 95,5" fill="green" border="black"/>
-                                
-                                </svg>
-                            </button>
-                        </td>
-                        <td>
-                            <button onclick="game.pressButton(this)">
-                                <svg
-                                aria-hidden="true"
-                                viewBox="0 0 100 100"
-                                height="100"
-                                width="100"
-                                >
-                                <path d="M5,5 5,95 95,95 Q 95,5 5,5" fill="red"/>
-                                </svg>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <button onclick="game.pressButton(this)">
-                                <svg
-                                aria-hidden:"false"
-                                viewBox="0 0 100 100"
-                                height="100"
-                                width="100"
-                                >
-                                <path d="M5,5 95,5 95,95 Q 5,95 5,5" fill="blue" />
-                                </svg>
-                            </button onclick="game.pressButton(this)">
-                        </td>
-                        <td>
-                            <button>
-                                <svg
-                                aria-hidden="true"
-                                 viewBox="0 0 100 100"
-                                height="100"
-                                width="100"
-                                >
-                                <path d="M95,5 5,5 5,95 Q 95,95 95,5" fill="yellow" />
-                                </svg>
-                            </button>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </main>
-
-        <footer>
-            <hr />
-            <div class="myFooter">
-                <section class="text-reset">Author Info:</section>
-                <br />
-                <section><a class="myGitHub" href="https://github.com/WarrenPeace101/simon">Warren</a></section>
-            </div>
-        </footer>
-
-        <script src="play.js"></script>
-        
-    </body>
-
+    <script src="play.js"></script>
+  </body>
 </html>
