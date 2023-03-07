@@ -1,0 +1,191 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-width: 375px;
+}
+
+header {
+    flex: 0 0px;
+    width: 100vw;
+    background-color: #9a9a9a;
+}
+
+header > h1 {
+    color: brown;
+    font-size: 4.5em;
+    text-align: center;
+    text-shadow: 3px 3px maroon;
+    
+}
+
+footer {
+    color: white;
+    justify-content: flex-end;
+    padding-top: 10px;
+    text-align: center;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    background-color: #9a9a9a;
+    flex: 0 15vh;
+}
+
+.myFooter {
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+main {
+    background-color: #b2beb5;
+    width: 100vw;
+    flex: 1 63vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main > h3 {
+    flex: 2;
+    color: maroon;
+    text-shadow: brown;
+}
+
+main > form {
+    flex: 2;
+    color: maroon;
+}
+
+main > form > button {
+    color: white;
+    background-color: maroon;
+}
+
+menu {
+    
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+
+  }
+
+li:nth-child(1) {
+    background-color:#b30000;
+    outline-style: solid;
+    outline-color: maroon;
+    flex: 1;
+
+}
+
+li:nth-child(2) {
+    flex: 1;
+    
+}
+
+li:nth-child(3) {
+    background-color:#b30000;
+    outline-style: solid;
+    outline-color: maroon;
+    flex: 1;
+    
+}
+
+li:nth-child(4) {
+    flex: 1;
+    
+}
+
+li:nth-child(5) {
+    background-color:#b30000;
+    outline-style: solid;
+    outline-color: maroon;
+    flex: 1;
+    
+}
+
+li:nth-child(6) {
+    flex: 1;
+    
+}
+
+li:nth-child(7) {
+    background-color:#b30000;
+    outline-style: solid;
+    outline-color: maroon;
+    flex: 1;
+    
+}
+
+li:nth-child(8) {
+    flex: 1;
+    
+}
+
+.players {
+    color: maroon;
+
+}
+
+main > div > label {
+    color: maroon;
+}
+
+main > div > button {
+    color: white;
+    background-color: maroon;
+}
+
+table {
+    width: 80%;
+    border: 3px solid maroon;
+}
+
+tr {
+
+    background-color: #a70505;
+    outline-style: solid;
+    outline-width: 3px;
+    height: 10px;
+    border: 3px solid rgb(217, 192, 255);
+
+}
+
+th {
+    color: yellow;
+}
+
+td {
+    border: 3px solid maroon;
+    color: white;
+
+}
+
+main > p {
+    color: maroon;
+    font-size: 1.3em;
+
+}
+
+.myGitHub {
+    color: white;
+    text-decoration-line: underline;
+    text-decoration-color: white;
+    text-decoration-style: solid;
+}
+
+@media(max-height: 600px) {
+    header: {
+        display: none;
+    }
+    footer: {
+        display: none;
+    }
+    main {
+        flex: 1 100vh;
+    }
+}
